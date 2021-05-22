@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  #静态资源映射路径
+  resources:
+    #静态资源目录,目录按配置顺序由先到后，优先级由高到低。
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+
+
+  #模板热部署、禁用 thymeleaf 缓存
+  thymeleaf:
+    cache: false
+
+  #静态资源访问路径
+  # 只有静态资源的访问路径为/static/**时，才会处理请求
+  mvc:
+    #请求路径
+    static-path-pattern: /static/**
