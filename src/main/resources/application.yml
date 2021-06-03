@@ -17,3 +17,8 @@ spring:
   mvc:
     #请求路径
     static-path-pattern: /static/**
+
+  #jsp 支持
+  view:
+    suffix: .jsp
+    prefix: /WEB-INF/jsp/
